@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+}
+
+.header{
+    background-color: #e6e6e6;
+    height: 50px;
+    color: white;
+}
+
+.navBar:hover{
+    color: rgb(255, 255, 255);
+}

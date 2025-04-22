@@ -1,0 +1,150 @@
+.main-containt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-container{
+    position: relative;
+    width: 100%;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.img-home{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+.top-content{
+    z-index: 2;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    max-width: 80%;
+}
+
+.title {
+    font-size: 45px;
+    
+}
+
+.subtitle {
+    font-size: 70px;
+}
+
+.title-container{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 200px;
+}
+
+.hr-title{
+    width: 680px;
+    height: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(0, 132, 255);
+    margin-bottom: 40px;
+}
+
+.bottom-container {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 10px;
+    background-color: #ffffff;
+    box-shadow: 8px 5px 15px #dfdfdf;
+    box-sizing: border-box;
+    max-width: 80%;
+    max-height: 800px;
+    z-index: 1;
+}
+
+.column {
+    width: 50%;
+}
+
+.column h3 {
+    font-size: 28px;
+    padding-bottom: 15px;
+}
+
+.img-container{
+    margin-bottom: 20px;
+}
+
+.img-about{
+    margin-left: 10px;
+    width: 90%;
+}
+
+.column p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    max-width: 95%;
+}
+
+.column ul {
+    margin-left:-40px;
+    list-style-type: none;
+}
+
+.skills{
+    list-style: none;
+    padding-left: 40px;
+    max-width: 720px;
+}
+
+.skills li{
+    margin-bottom: 25px;
+}
+
+.progress-bar{
+    width: 100%;
+    height: 15px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.progress{
+    height: 100%;
+    border-radius: 10px;
+}
+
+.bg-red .progress{
+    background-color: #f44336;
+    width: 80%;
+}
+.bg-blue .progress{
+    background-color: #0044ff;
+    width: 60%;
+}
+.bg-yellow .progress{
+    background-color: #ffd900;
+    width: 25%;
+}
+.bg-purple .progress{
+    background-color: #ad20ff;
+    width: 25%;
+}
