@@ -10,10 +10,25 @@ function Home () {
     };
 
     const Paragraph = ({ children }) =>(
-        <p className="!text-xs leading-[1.9] ml-[10px] !mb-[15px] max-w-[95%]">
+        <p className="text-sm leading-[1.9] mb-[15px] max-w-[98%]">
             {children}
         </p>
     );
+
+    const SkillBar = ({ label, percentage, color }) => {
+        return(
+            <li className="mb-6">
+                <span className="block mb-1">{label} - {percentage}%</span>
+                <div className="w-[95%] h-[15px] bg-[#e0e0e0] rounded-[10px] overflow-hidden mb-5">
+                    <div 
+                        className="h-full rounded-[10px]"
+                        style={{ width : `${percentage}%` , backgroundColor: color}}
+                        
+                    ></div>
+                </div>
+            </li>
+        )
+    };
 
     return (
         // separation du contenue en deux conatiner horizontaux 
@@ -22,14 +37,14 @@ function Home () {
                 <img className='w-screen h-full object-cover object-center absolute top-0 left-0 opacity-70 z-[1]' src= {heroBG} alt ="Developpeur au travail"/>
                 <div className="z-[2] realtive w-full h-full text-center text-white flex flex-col gap-5 items-center justify-center px-4">
                     <div className="flex flex-col-reverse items-center gap-10">
-                        <h1 className='!text-4xl md:text-3xl font-bold !mb-[150px]'>Developpeur web et web mobile</h1>
-                        <h2 className='!text-6xl md:text-6xl font-bold'>Bonjour je suis John Doe</h2>
+                        <h1 className='text-4xl md:text-4xl font-bold mb-[150px]'>Developpeur web et web mobile</h1>
+                        <h2 className='text-6xl md:text-6xl font-bold'>Bonjour je suis John Doe</h2>
                     <Button onClick={handleClick} texte='En savoir plus'/>  
                     </div>
                 </div>
             </div>
 
-            <div className="flex justify-around bg-zinc-50 shadow-lg/20 p-8 border-zinc-200 box-border max-w-[80%] max-h-[800px] z-[1]">
+            <div className="flex justify-around bg-zinc-50 shadow-lg/20 p-8 border-zinc-200 box-border max-w-[80%] max-h-[800px] z-[1] mb-10 mt-7">
                 <div className="column">
                     <h3>A propos</h3>
                     <hr className='hr-title'/>
@@ -52,31 +67,11 @@ function Home () {
                 <div className="column">
                     <h3>Mes compétences</h3>
                     <hr className='hr-title'/>
-                    <ul className='skills'>
-                        <li>
-                            <span>HTML - 80%</span>
-                            <div className="progress-bar bg-red">
-                                <div className="progress" ></div>
-                            </div>
-                        </li>
-                        <li>
-                            <span>CSS - 60%</span>
-                            <div className="progress-bar bg-blue">
-                                <div className="progress"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <span>JAVASCRIPT - 25%</span>
-                            <div className="progress-bar bg-yellow">
-                                <div className="progress"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <span>REACT JS - 25%</span>
-                            <div className="progress-bar bg-purple">
-                                <div className="progress"></div>
-                            </div>
-                        </li>
+                    <ul>
+                        <SkillBar label="HTML" percentage={80} color="#f44336"/>
+                        <SkillBar label="CSS" percentage={60} color="#0044ff" />
+                        <SkillBar label="JAVASCRIPT" percentage={25} color="#ffd900" />
+                        <SkillBar label="REACT JS" percentage={25} color="#ad20ff" />
                     </ul>
                 </div>
             </div>

@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider, Outlet, useRouteError } from "react-router-dom"
 import NavBar from "./componnents/NavBar"
+import Footer from "./componnents/footer"
 import Home from './pages/Home'
 
 
@@ -14,19 +15,19 @@ const router = createBrowserRouter([
                 element: <Home/>
             },
             {
-                path: 'Services',
+                path: 'services',
                 element: <div>Services</div>
             },
             {
-                path: 'Portfolio',
+                path: 'portfolio',
                 element: <div>Portfolio</div>
             },
             {
-                path: 'Contact',
+                path: 'contact',
                 element: <div>Contactez-moi</div>
             },
             {
-                path: 'MentionLegales',
+                path: 'mentions',
                 element: <div>Mention Légales</div>
             },
         ]
@@ -54,6 +55,7 @@ function Root (){
             <div className="container">
                 <Outlet/>
             </div>
+            <Footer/>
         </>
 
     )
