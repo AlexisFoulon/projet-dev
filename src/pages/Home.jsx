@@ -2,13 +2,12 @@ import React from 'react';
 import heroBG from '../assets/img/hero-bg.jpg'
 import AboutImg from '../assets/img/john-doe-about.jpg'
 import './Home.css'
-import Button from '../componnents/button'
 
 function Home () {
     const handleClick = () =>{
         alert('boutton cliqué !')
     };
-
+    
     const Paragraph = ({ children }) =>(
         <p className="text-sm leading-[1.9] mb-[15px] max-w-[98%]">
             {children}
@@ -30,6 +29,17 @@ function Home () {
         )
     };
 
+    const ButtonHome = ({ onClick, texte }) =>{
+        return(
+            <button
+                className="absolute top-[60%] left-2/4 transform -translate-x-2/4 -translate-y-2/4 bg-red-500 text-white p-2 rounded-md z-10 hover:bg-red-800 cursor-pointer"
+                onClick={onClick}
+            >
+                {texte}
+            </button>
+        )   
+    }
+
     return (
         // separation du contenue en deux conatiner horizontaux 
         <div className="flex flex-col items-center w-screen">
@@ -39,7 +49,7 @@ function Home () {
                     <div className="flex flex-col-reverse items-center gap-10">
                         <h1 className='text-4xl md:text-4xl font-bold mb-[150px]'>Developpeur web et web mobile</h1>
                         <h2 className='text-6xl md:text-6xl font-bold'>Bonjour je suis John Doe</h2>
-                    <Button onClick={handleClick} texte='En savoir plus'/>  
+                    <ButtonHome onClick={handleClick} texte='En savoir plus'/>  
                     </div>
                 </div>
             </div>

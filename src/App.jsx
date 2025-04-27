@@ -2,6 +2,8 @@ import { createBrowserRouter, RouterProvider, Outlet, useRouteError } from "reac
 import NavBar from "./componnents/NavBar"
 import Footer from "./componnents/footer"
 import Home from './pages/Home'
+import Services from "./pages/services"
+import Portfolio from "./pages/portfolio"
 
 
 const router = createBrowserRouter([
@@ -16,11 +18,11 @@ const router = createBrowserRouter([
             },
             {
                 path: 'services',
-                element: <div>Services</div>
+                element: <Services/>
             },
             {
                 path: 'portfolio',
-                element: <div>Portfolio</div>
+                element: <Portfolio/>
             },
             {
                 path: 'contact',
