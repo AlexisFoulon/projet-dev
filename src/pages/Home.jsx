@@ -1,13 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import heroBG from '../assets/img/hero-bg.jpg'
 import AboutImg from '../assets/img/john-doe-about.jpg'
 import './Home.css'
+import Modal from '../componnents/Modal';
 
 function Home () {
-    const handleClick = () =>{
-        alert('boutton cliqué !')
-    };
-    
+
     const Paragraph = ({ children }) =>(
         <p className="text-sm leading-[1.9] mb-[15px] max-w-[98%]">
             {children}
@@ -40,6 +38,12 @@ function Home () {
         )   
     }
 
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
+
+
     return (
         // separation du contenue en deux conatiner horizontaux 
         <div className="flex flex-col items-center w-screen">
@@ -49,7 +53,7 @@ function Home () {
                     <div className="flex flex-col-reverse items-center gap-10">
                         <h1 className='text-4xl md:text-4xl font-bold mb-[150px]'>Developpeur web et web mobile</h1>
                         <h2 className='text-6xl md:text-6xl font-bold'>Bonjour je suis John Doe</h2>
-                    <ButtonHome onClick={handleClick} texte='En savoir plus'/>  
+                    <ButtonHome onClick={openModal} texte='En savoir plus'/>  
                     </div>
                 </div>
             </div>
@@ -85,6 +89,8 @@ function Home () {
                     </ul>
                 </div>
             </div>
+            <Modal isOpen={isModalOpen} closeModal={closeModal} />
+
         </div>
     )
 }
