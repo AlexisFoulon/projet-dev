@@ -1,6 +1,11 @@
 import { createBrowserRouter, RouterProvider, Outlet, useRouteError } from "react-router-dom"
 import NavBar from "./componnents/NavBar"
+import Footer from "./componnents/footer"
 import Home from './pages/Home'
+import Services from "./pages/services"
+import Portfolio from "./pages/portfolio"
+import Contact from "./pages/contact"
+import Mentions from "./pages/mentions"
 
 
 const router = createBrowserRouter([
@@ -14,20 +19,20 @@ const router = createBrowserRouter([
                 element: <Home/>
             },
             {
-                path: 'Services',
-                element: <div>Services</div>
+                path: 'services',
+                element: <Services/>
             },
             {
-                path: 'Portfolio',
-                element: <div>Portfolio</div>
+                path: 'portfolio',
+                element: <Portfolio/>
             },
             {
-                path: 'Contact',
-                element: <div>Contactez-moi</div>
+                path: 'contact',
+                element: <Contact/>
             },
             {
-                path: 'MentionLegales',
-                element: <div>Mention Légales</div>
+                path: 'mentions',
+                element: <Mentions/>
             },
         ]
     }
@@ -54,6 +59,7 @@ function Root (){
             <div className="container">
                 <Outlet/>
             </div>
+            <Footer/>
         </>
 
     )
