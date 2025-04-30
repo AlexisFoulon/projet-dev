@@ -1,6 +1,7 @@
 
 .hr-title{
     width: 690px;
+
     height: 5px;
     border: none;
     border-radius: 4px;
@@ -15,7 +16,6 @@
 .column h3 {
     font-size: 28px;
     padding-bottom: 15px;
-    font-weight: 500;
 }
 
 .column ul {
