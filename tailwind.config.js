@@ -7,6 +7,9 @@ export default defineConfig({
   ],
   theme: {
     extend: {
+      fontFamily: {
+        nunito: ['"Nunito Sans"', 'sans-serif']
+      },
       keyframes: {
         'fade-in': {
           '0%': { opacity: '0' },

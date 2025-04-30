@@ -5,7 +5,7 @@ function AccordionCard ({title, content, isFirst, isLast}) {
     const [isOpen, setIsOpen] = useState (false)
 
     const roundedClass = isFirst
-        ?"rounded-t-md"
+        ?"rounded-t-md "
         :isLast
         ?"rounded-b-md"
         :""
@@ -15,7 +15,8 @@ function AccordionCard ({title, content, isFirst, isLast}) {
         <div className={`bg-zinc-50 w-full border-t border-zinc-200 ${roundedClass}`}>
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="flex justify-between items-center w-full p-4 text-left font-semibold text-lg"
+                aria-expanded={isOpen}
+                className="flex justify-between items-center w-full p-4 text-left text-base sm:text-lg font-medium"
             >
                 {title}
                 <img src={ArrowDown} 
@@ -24,7 +25,7 @@ function AccordionCard ({title, content, isFirst, isLast}) {
                 />
             </button>
             {isOpen && (
-                <div className="p-4 bg-white text-gary-700 border-t border-gray-300 transition-all duration-300 ">
+                <div className="p-4 bg-white text-gray-700 border-t border-gray-300 transition-all duration-300 ">
                     {content}
                 </div>
             )}

@@ -18,7 +18,7 @@ export default function ImageAdresse ({ src, alt }) {
             {/* lightbox */}
             {isOpen && (
                 <div 
-                    className="fixed inset-0 bg-gray-500 bg-opacity-10 flex items-center justify-center z-50 transition-opacity duration-300"
+                    className="fixed inset-0 bg-gray-500/30 backdrop-blur-sm flex items-center justify-center z-50 transition-opacity duration-300 animate-fade-in "
                     onClick ={() => setIsOpen(false)} //fermer au clic
                 >
                     <img 

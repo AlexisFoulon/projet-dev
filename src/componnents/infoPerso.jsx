@@ -44,7 +44,7 @@ function InfosPerso (){
                 </li>
                 <li className="flex items-center gap-2" > 
                     <img src={Email} alt="image de Smartphone" className="w-4 h-4"/>
-                    <a href="Mailto:jonh.doe@gmail.com"
+                    <a href="mailto:jonh.doe@gmail.com"
                         target="_blank"
                         rel="noopener norreferrer"
                         className="transition-all duration-400 hover:underline hover:text-xl"

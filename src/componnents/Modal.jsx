@@ -15,10 +15,10 @@ function Modal ({ isOpen, closeModal}) {
             const data = {
                 name:"Aléxis Foulon",
                 location:"Reims, France",
-                bio:"Je suis Developpeur junior en apprentissage",
+                bio:"Je suis Aléxis foulon, développeur web et web mobile en apprentissage au CEF",
                 repos: 3,
-                followers:0,
-                following:0,
+                followers: 0,
+                following: 0,
             };
             setGithubData(data);
         }
@@ -35,15 +35,16 @@ function Modal ({ isOpen, closeModal}) {
 
     return(
         <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex justify-center items-center z-50 animate-fade-in">
-            <div className="bg-gray-700 p-4 text-white rounded-md shadow-lg w-[650px] h-[550px] flex flex-col">
+            <div className="bg-gray-700 p-4 text-white rounded-md shadow-lg w-[90%] max-w-[600px] md:max-w-[800px] h-[550px] flex flex-col">
                 <h2 className="text-2xl font-bold  mb-4">Mon profil GitHub </h2>
                 <hr className="border-gray-300/25 mb-8"/>
                 <div className="flex flex-row flex-1 overflow-hidden gap-6">
                     <img  
-                    className="object-conatin rounded-md h-full max-h-[250px]"
+                    className="object-contain rounded-md h-full max-h-[250px]"
                     src={ImgGithub} 
                     alt="AutoPortrait fait avec une ia" 
                     />
+                    
                     <div className="w-2/3 max-h-[450px] overflow-hidden pr-2">
                         {githubData ?(
                             <ul className="space-y-2 texte-sm">
@@ -75,7 +76,8 @@ function Modal ({ isOpen, closeModal}) {
                                     <img 
                                     src={Cube} 
                                     alt="Icone de cube représentant des repository" 
-                                    className="w-5 h-5"/>
+                                    className="w-5 h-5 "/>
+                                    <span>Repositories :</span> 
                                     {githubData.repos}
                                 </li>
                                 <hr className={styleHr()}/>
@@ -84,6 +86,7 @@ function Modal ({ isOpen, closeModal}) {
                                     src={Users}
                                     alt="icone d'utilisateurs"
                                     className="w-5 h-5"/>
+                                    <span>Followers</span>
                                     {githubData.followers}
                                 </li>
                                 <hr className={styleHr()}/>
@@ -92,6 +95,7 @@ function Modal ({ isOpen, closeModal}) {
                                     src={Users}
                                     alt="icone d'utilisateurs"
                                     className="w-5 h-5"/>
+                                    <span>Following </span>
                                     {githubData.following}
                                 </li>
                             </ul>
