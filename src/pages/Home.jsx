@@ -7,7 +7,7 @@ function Home () {
     const handleClick = () =>{
         alert('boutton cliqué !')
     };
-    
+
     const Paragraph = ({ children }) =>(
         <p className="text-sm leading-[1.9] mb-[15px] max-w-[98%]">
             {children}
@@ -89,7 +89,4 @@ function Home () {
     )
 }
 
-
 export default Home
-
-
