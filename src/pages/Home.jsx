@@ -8,7 +8,6 @@ function Home () {
         alert('boutton cliqué !')
     };
 
-<<<<<<< HEAD
     const Paragraph = ({ children }) =>(
         <p className="text-sm leading-[1.9] mb-[15px] max-w-[98%]">
             {children}
@@ -88,10 +87,7 @@ function Home () {
             </div>
         </div>
     )
-<<<<<<< HEAD
 }
 
 export default Home
-=======
-}
->>>>>>> master
+
