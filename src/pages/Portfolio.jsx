@@ -23,38 +23,38 @@ function Portfolio () {
                 <CardPortfolio
                     imgSrc={FreshFood}
                     title='Fresh Food'
-                    alt="Site de vente de produits frais en ligne"
+                    description="Site de vente de produits frais en ligne"
                     infosRectangle= "Site réalisé avec PHP et MySQL"
                 />
                 <CardPortfolio
                     imgSrc={Jap}
                     title='Restaurant Akira'
-                    alt="Site de vente de produits frais en ligne"
+                    description="Site de vente de produits frais en ligne"
                     infosRectangle= "Site réalisé avec WordPress"
                     
                 />
                 <CardPortfolio
                     imgSrc={Wellness}
                     title='Espace bien-être'
-                    alt="Site de vente de produits frais en ligne"
+                    description="Site de vente de produits frais en ligne"
                     infosRectangle= "Site réalisé avec LARAVEL"
                 />
                 <CardPortfolio
                     imgSrc={SEO}
                     title='SEO'
-                    alt="Site de vente de produits frais en ligne"
+                    description="Amélioration du référencement d'un site e-commerce"
                     infosRectangle= "Utilisation des outils SEO"
                 />
                 <CardPortfolio
                     imgSrc={Code}
                     title="Création d'une API"
-                    alt="Site de vente de produits frais en ligne"
+                    description="Création d'un API RESTFULL publique"
                     infosRectangle= "PHP - SYMFONY"
                 />
                 <CardPortfolio
                     imgSrc={Screen}
                     title="Maquette d'un site web"
-                    alt="Site de vente de produits frais en ligne"
+                    description="Création du prototype d'un site"
                     infosRectangle= "Site réalisé avec FIGMA"
                 />
             </div>
