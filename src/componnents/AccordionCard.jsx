@@ -3,7 +3,7 @@ import ArrowDown from '../assets/img/ArrowDown.png'
 
 function AccordionCard ({title, content, isFirst, isLast}) {
     const [isOpen, setIsOpen] = useState (false)
-
+    
     const roundedClass = isFirst
         ?"rounded-t-md "
         :isLast
@@ -25,7 +25,7 @@ function AccordionCard ({title, content, isFirst, isLast}) {
                 />
             </button>
             {isOpen && (
-                <div className="p-4 bg-white text-gray-700 border-t border-gray-300 transition-all duration-300 ">
+                <div className="p-4 bg-white text-gray-700 border-t border-gray-300 ">
                     {content}
                 </div>
             )}
