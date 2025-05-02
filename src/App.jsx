@@ -4,6 +4,8 @@ import Footer from "./componnents/footer"
 import Home from './pages/Home'
 import Services from "./pages/services"
 import Portfolio from "./pages/portfolio"
+import Contact from "./pages/contact"
+import Mentions from "./pages/mentions"
 
 
 const router = createBrowserRouter([
@@ -26,11 +28,11 @@ const router = createBrowserRouter([
             },
             {
                 path: 'contact',
-                element: <div>Contactez-moi</div>
+                element: <Contact/>
             },
             {
                 path: 'mentions',
-                element: <div>Mention Légales</div>
+                element: <Mentions/>
             },
         ]
     }
